@@ -45,6 +45,10 @@ end
 
 group :production do
   gem 'pg'
-  gem 'heroku'
-  
+  gem 'heroku'  
 end
+
+gem 'paperclip', '~> 4.2.1'
+gem 'aws-sdk', '~> 1.5.7'
+gem 'simple_form', '3.1.0'
+
