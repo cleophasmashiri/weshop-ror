@@ -45,7 +45,8 @@ end
 
 group :production do
   gem 'pg'
-  gem 'heroku'  
+  gem 'heroku' 
+  gem 'rails_12factor' 
 end
 
 gem 'paperclip', '~> 4.2.1'
