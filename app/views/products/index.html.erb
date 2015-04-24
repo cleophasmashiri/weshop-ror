@@ -11,15 +11,16 @@
   <% @products.each do |product| %>
     <div class="col-md-3 col-sm-6">
       <div class="thumbnail">
-        <%= link_to (image_tag product.image.url(:medium), class: :image), product %>
+        <%= link_to (image_tag product.image.url(:thumb), class: :image), product %>
       </div>
-    </div>
-
-  <p><%= product.name %></p>
-  <br><%= product.name %>
-  <br><%= product.description %>
-  <br><%= link_to 'Show', product %>
-  <br><%= link_to 'Edit', edit_product_path(product) %>
-  <br><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  
+  <%= product.name %>
+  <br><br><a class="btn btn-primary btn-lg" href="#" role="button">Add to Cart</a> | <%= link_to 'Show', product %>
+  | <%= link_to 'Edit', edit_product_path(product) %>
+  | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
  <% end %>
 </div>
+
+<br><br>
+<%= link_to 'Add New', new_product_path %>
