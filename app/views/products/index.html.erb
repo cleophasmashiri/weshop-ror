@@ -1,10 +1,10 @@
-
-
-<div class="jumbotron">
-  <h1>Exprerience shopping like no other</h1>
-  <p>...</p>
-
-</div>
+<% if !user_signed_in? %>
+  <div class="jumbotron">
+    <h1>Exprerience shopping like no other</h1>
+    <p></p>
+    <p><%= link_to "Sign up", new_user_registration_path, class: 'btn btn-primary btn-lg' %></p>
+  </div>
+<% end %>
 
 <h1>Listing Products</h1>
 <div class="row">
