@@ -4,8 +4,12 @@
   <strong>Name:</strong>
   <%= @product.name %>
 </p>
-
 <p>
+  <strong>Price:</strong>
+  <%= number_to_currency product.price%>
+</p>
+<p>
+
   <strong>Description:</strong>
   <%= @product.description %>
 </p>

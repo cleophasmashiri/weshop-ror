@@ -15,7 +15,10 @@
       </div>
   
   <%= product.name %>
-  <br><br><a class="btn btn-primary btn-lg" href="#" role="button">Add to Cart</a> | <%= link_to 'Show', product %>
+  <br><%= number_to_currency product.price%>
+  <br><br>
+  <%= link_to "Add to Cart", shopping_cart_path(:product_id => product), :method => 'POST', class: 'btn btn-primary btn-lg',role: 'button' %>
+  | <%= link_to 'Show', product %>
   | <%= link_to 'Edit', edit_product_path(product) %>
   | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>

@@ -1,0 +1,15 @@
+<h1>Shopping Cart</h1>
+
+<%= render :partial => 'shopping_cart_item', :collection => @shopping_cart.shopping_cart_items  %>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <p><b>Sub Total:</b> <%= number_to_currency @shopping_cart.subtotal %></p> <p><b>Taxes :</b> <%= number_to_currency @shopping_cart.taxes %></p>
+        <p><b>Total:</b> <%= number_to_currency @shopping_cart.total %></p>          
+          <%= link_to "Checkout", shopping_cart_path(:product_id => nil), :method => 'POST', class: 'btn btn-primary btn-lg',role: 'button' %>
+      </div>
+    </div>
+  </div>
+</div>
