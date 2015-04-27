@@ -15,7 +15,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="<%= current_class?(root_path) %>"><%= link_to "Home", root_path, :class => current_class?(root_path) %></li> 
-        <li class="<%= current_class?(shopping_cart_path) %>"><%= link_to "Cart", shopping_cart_path %></li>           
+        <li class="<%= current_class?(cart_path) %>"><%= link_to "My Cart", cart_path %>  
+        </li>           
       </ul>     
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>

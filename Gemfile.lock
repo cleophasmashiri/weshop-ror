@@ -109,6 +109,7 @@ GEM
     heroku-api (0.3.23)
       excon (~> 0.44)
       multi_json (~> 1.8)
+    hiredis (0.4.5)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.7.0)
@@ -175,6 +176,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    redis (3.0.4)
     request_store (1.1.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
@@ -242,12 +244,14 @@ DEPENDENCIES
   figaro (~> 0.7.0)
   gon (~> 5.1.2)
   heroku
+  hiredis (~> 0.4.5)
   jbuilder (~> 2.0)
   jquery-rails
   paperclip (~> 4.2.1)
   pg
   rails (= 4.2.0)
   rails_12factor
+  redis (~> 3.0.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   searchkick (~> 0.8.7)

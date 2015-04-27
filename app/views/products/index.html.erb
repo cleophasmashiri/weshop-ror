@@ -18,8 +18,9 @@
   <br><%= number_to_currency product.price %>
   <br>
   
-  <%= link_to content_tag("span", "", class:"glyphicon glyphicon-shopping-cart")+" Add to Cart", shopping_cart_path(:product_id => product), :method => 'POST', class: 'btn btn-primary btn-default',role: 'button' %>  
-
+  <%= link_to "", class: "btn btn-primary btn-default", data: {target: get_cart_action(product), addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do %>
+    <span class="glyphicon glyphicon-shopping-cart"><%=get_cart_action(product) %></span> Cart
+  <% end %>
   | <%= link_to 'Show', product %>
   | <%= link_to 'Edit', edit_product_path(product) %>
   | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
