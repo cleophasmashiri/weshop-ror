@@ -79,14 +79,4 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'tyreshop.herokuapp.com', port: 80 }
 
-   # Amazon S3 settings for Paperclip uploads
-  config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_protocol => 'http',
-    :s3_credentials => {
-      :bucket => 'cleophasmashirimoviereviews',
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }
-  }
 end
