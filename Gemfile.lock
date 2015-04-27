@@ -59,6 +59,8 @@ GEM
     bootstrap-sass (3.3.4.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
+    braintree (2.33.1)
+      builder (>= 2.0.0)
     builder (3.2.2)
     byebug (4.0.5)
       columnize (= 0.9.0)
@@ -96,8 +98,16 @@ GEM
     execjs (2.5.2)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    gon (5.1.2)
+      actionpack (>= 2.3.0)
+      json
+      multi_json
+      request_store (>= 1.0.5)
     hashie (3.4.0)
     heroku (3.29.0)
       heroku-api (~> 0.3.19)
@@ -177,6 +187,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    request_store (1.1.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     rest-client (1.6.7)
@@ -234,10 +245,13 @@ DEPENDENCIES
   acts_as_shopping_cart (~> 0.2.1)
   aws-sdk (~> 1.5.7)
   bootstrap-sass (~> 3.3.4)
+  braintree (~> 2.33.1)
   byebug
   coffee-rails (~> 4.1.0)
   devise (~> 3.4.1)
   devise-bootstrap-views
+  figaro (~> 0.7.0)
+  gon (~> 5.1.2)
   heroku
   jbuilder (~> 2.0)
   jquery-rails

@@ -51,4 +51,6 @@ Rails.application.configure do
       :secret_access_key => 'xFoTFpZzSmdU6Vocz4cuzkfX4VgwTUu8ALeW+YQL'
     }
   }
+
+
 end

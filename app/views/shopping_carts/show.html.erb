@@ -8,7 +8,24 @@
       <div class="col-md-4">
         <p><b>Sub Total:</b> <%= number_to_currency @shopping_cart.subtotal %></p> <p><b>Taxes :</b> <%= number_to_currency @shopping_cart.taxes %></p>
         <p><b>Total:</b> <%= number_to_currency @shopping_cart.total %></p>          
-          <%= link_to "Checkout", shopping_cart_path(:product_id => nil), :method => 'POST', class: 'btn btn-primary btn-lg',role: 'button' %>
+          <%= link_to "Checkout", new_transaction_path, :method => 'POST', class: 'btn btn-primary btn-lg',role: 'button' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-container radius-box glassy-bg small-10 small-centered medium-8 large-6 columns">
+          <h2 class="mbs">New Transaction</h2>
+          <%= form_tag transactions_path do%>
+            <p>Please enter your payment details:</p>
+            <div id="dropin"></div>
+            <%=submit_tag "Pay #{number_to_currency @shopping_cart.total}", class: "button mt1" %>
+          <%end%>
+        </div>
       </div>
     </div>
   </div>

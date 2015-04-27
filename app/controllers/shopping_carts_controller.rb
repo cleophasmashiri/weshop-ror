@@ -1,4 +1,5 @@
 class ShoppingCartsController < ApplicationController
+  
   before_filter :extract_shopping_cart
 
   def create
