@@ -9,24 +9,24 @@
 <h1>Listing Products</h1>
 <div class="row">
   <% @products.each do |product| %>
-    <div class="col-md-3 col-sm-6">
+    <div class="col-sm-4 col-lg-4 col-md-4">
       <div class="thumbnail">
-        <%= link_to (image_tag product.image.url(:thumb), class: :image), product %>
+          <%= link_to (image_tag product.image.url(:thumb), class: :image), product %>
+          <div class="caption">
+              <h4 class="pull-right"><%= number_to_currency product.price %></h4>
+              <h4>
+              <span><%= product.name %></span>           
+              </h4>
+                
+            <%= link_to "", class: "btn btn-primary btn-default", data: {target: get_cart_action(product), addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do %>
+              <span class="glyphicon glyphicon-shopping-cart"><%=get_cart_action(product) %></span> Cart
+            <% end %>
+            | <%= link_to 'Show', product %>
+            | <%= link_to 'Edit', edit_product_path(product) %>
+            | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+          </div>          
       </div>
-  
-  <%= product.name %>
-  <br><%= number_to_currency product.price %>
-  <br>
-  
-  <%= link_to "", class: "btn btn-primary btn-default", data: {target: get_cart_action(product), addUrl: add_to_cart_path(product), removeUrl: remove_from_cart_path(product)} do %>
-    <span class="glyphicon glyphicon-shopping-cart"><%=get_cart_action(product) %></span> Cart
-  <% end %>
-  | <%= link_to 'Show', product %>
-  | <%= link_to 'Edit', edit_product_path(product) %>
-  | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
  <% end %>
 </div>
-
-<br><br>
-<%= link_to 'Add New', new_product_path %>
