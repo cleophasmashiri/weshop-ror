@@ -1,2 +1,16 @@
-<h1>Transactions#new</h1>
-<p>Find me in app/views/transactions/new.html.erb</p>
+<div class="panel panel-default">
+ <h1>Transactions#new</h1>
+  <div class="panel-body">
+     <%= form_tag transactions_path do %>
+      <div class="row">
+        <div class="col-md-4">
+          <p>Please enter your payment details:</p>
+          <div id="dropin"></div>
+          <%= submit_tag "Pay #{cart_total_price} changes", :id => "submit", :name => "submit", :class => "form_submit", :disabled => false, :disable_with => "Please wait..." %>   
+        </div>
+      </div>  
+     <% end %> 
+
+    
+  </div>
+</div>

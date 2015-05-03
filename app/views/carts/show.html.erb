@@ -2,6 +2,16 @@
 <div id="mycart">
   <div class="panel panel-default">
     <div class="panel-body">
-      <%= render :partial => 'cart_product', :collection => @cart_products  %>    
+      <%= render :partial => 'cart_product', :collection => @cart_products  %>  
+        
+      <div class="row">
+        <div class="col-md-4 col-sm-6"></div>
+        <div class="col-md-4 col-sm-6">
+             <%= link_to new_transaction_path, class: "btn btn-primary btn-default" do %>
+          <span class="glyphicon glyphicon-shopping-cart"></span>Check Out >>
+        <% end %> 
+        </div>
+        <div class="col-md-4 col-sm-6"></div>
+      </div>
     </div>
   </div>

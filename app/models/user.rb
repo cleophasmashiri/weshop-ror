@@ -5,7 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :purchases, foreign_key: :buyer_id
   has_many :products, through: :purchases
-
-  def cart_count    
-  end
+ 
 end
